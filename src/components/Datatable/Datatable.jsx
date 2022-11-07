@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import './datatable.scss';
 import { DataGrid } from '@mui/x-data-grid';
-
+import {Link} from 'react-router-dom';
 const Datatable =() =>{
 
     const columns = [
@@ -46,8 +46,10 @@ const Datatable =() =>{
             renderCell : (param)=>{
                 return(
                     <div className="cellAction">
-                        <div className="viewButton">View</div>
-                        <div className="deleteButton">Delete</div>
+                        <Link to="/users/test" style={{textDecoration : 'none'}}>
+                            <div className="viewButton">View</div>
+                        </Link>
+                        <div className="deleteButton" onClick={()=>handeClick(param.row.id)}>Delete</div>
                     </div>
                 )
             }
@@ -137,12 +139,22 @@ const Datatable =() =>{
             age: 65 
         },
       ];
+      const [data , setData] = useState(rows);
+      const handeClick = (id) =>{
 
+        setData(data.filter(item=>item.id!==id))
+      }
 
     return (
         <div className="datatable" >
+            <div className="datatableTitle">
+                Add New User
+                <Link to="/users/new" style={{textDecoration : 'none'}} className="link">
+                    Add New
+                </Link>
+            </div>
            <DataGrid
-                rows={rows}
+                rows={data}
                 columns={columns}
                 pageSize={9}
                 rowsPerPageOptions={[7]}

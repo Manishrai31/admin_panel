@@ -9,11 +9,14 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import {Link} from 'react-router-dom';
 const Sidebar = ()=>{
     return (
        <div className="sidebar">
             <div className="top">
-                <span className="logo">FTL</span>
+                <Link to="/" style={{textDecoration : 'none'}}>
+                    <span className="logo">FTL</span>
+                </Link>
             </div>
             <hr />
             <div className="center">
@@ -23,11 +26,12 @@ const Sidebar = ()=>{
                         <DashboardIcon className="icon" />
                         <span>Dashboard</span>
                     </li>
-
-                    <li>
-                        <PeopleIcon className="icon"/>
-                        <span>Users</span>
-                    </li>
+                    <Link to="/users" style={{textDecoration : 'none'}}>
+                        <li>
+                            <PeopleIcon className="icon"/>
+                            <span>Users</span>
+                        </li>
+                    </Link>
                     <p className="title">League</p>
 
                     <li>

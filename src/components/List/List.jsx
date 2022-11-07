@@ -57,11 +57,11 @@ const List = ()=>{
           <TableHead>
             <TableRow>
               <TableCell>Id </TableCell>
-              <TableCell align="left">Name</TableCell>
-              <TableCell align="left">Email&nbsp;(g)</TableCell>
-              <TableCell align="left">Mobile&nbsp;(g)</TableCell>
-              <TableCell align="left">Amount&nbsp;(g)</TableCell>
-              <TableCell align="left">Status&nbsp;(g)</TableCell>
+              <TableCell  className="tableCell" align="left">Name</TableCell>
+              <TableCell className="tableCell" align="left">Email&nbsp;(g)</TableCell>
+              <TableCell className="tableCell" align="left">Mobile&nbsp;(g)</TableCell>
+              <TableCell className="tableCell" align="left">Amount&nbsp;(g)</TableCell>
+              <TableCell className="tableCell" align="left">Status&nbsp;(g)</TableCell>
 
             </TableRow>
           </TableHead>
@@ -71,14 +71,14 @@ const List = ()=>{
                 key={row.name}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
+                <TableCell className="tableCell"  component="th" scope="row">
                   {row.id}
                 </TableCell>
-                <TableCell align="left">{row.name}</TableCell>
-                <TableCell align="left">{row.email}</TableCell>
-                <TableCell align="left">{row.mobile}</TableCell>
-                <TableCell align="left">{row.amount}</TableCell>
-                <TableCell align="left">
+                <TableCell className="tableCell" align="left">{row.name}</TableCell>
+                <TableCell className="tableCell" align="left">{row.email}</TableCell>
+                <TableCell  className="tableCell"align="left">{row.mobile}</TableCell>
+                <TableCell  className="tableCell"align="left">{row.amount}</TableCell>
+                <TableCell  className="tableCell"align="left">
                   <span className={`status ${row.status}` }>
                   {row.status}
                   </span>
