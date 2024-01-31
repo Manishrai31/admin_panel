@@ -1,4 +1,4 @@
-const isLogin = false;
+const isLogin = true;
 const authentication=(state = isLogin , action)=>{
     switch (action.type){
         case 'LOGIN' :

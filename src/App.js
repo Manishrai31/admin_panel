@@ -6,6 +6,8 @@ import List from "./views/pages/List/List";
 import Single from "./views/pages/Single/Single"
 // import './Style/dark.scss'
 // import Single from "./components/Base/Sidebar";
+
+//check
 import New from "./views/pages/New/New";
 const  App=()=> {
   return (
