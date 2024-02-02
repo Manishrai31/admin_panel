@@ -1,0 +1,98 @@
+// Login.scss
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e0e0e0;
+  }
+  
+  .neomorphic-card {
+    background: #e0e0e0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+  
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;  // Bold text
+      color: #333;
+      text-align: left; // Align the text to the left
+    }
+  
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+      text-align: left; // Align the input label to the left
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+        color: #555;
+      }
+  
+      input {
+        width: calc(100% - 30px);
+        padding: 14px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #e0e0e0;
+        font-size: 18px;
+        transition: box-shadow 0.3s ease, width 0.3s ease;  // Added transition on width
+  
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+      }
+  
+      .password-toggle-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        // transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+  
+    .error-message {
+        margin: 10px 0px;
+        color: #fff;
+        background-color: #ff6b6b;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: left;
+        box-shadow: 5px 5px 10px #d3d3d3, -5px -5px 10px #ffffff; // Neomorphic box shadow
+      }
+
+    button {
+      padding: 16px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;  // Bold text
+      transition: all 0.3s ease;  // Add smooth transition
+    //   box-shadow: 10px 10px 20px #388e3c, -10px -10px 20px #81c784;
+    //   box-shadow: 10px 10px 20px #388e3c, -10px -10px 20px #81c784; // Add neomorphic box shadow
+
+
+  
+      &:hover {
+        background-color: #45a049;
+        // box-shadow: 10px 10px 20px #388e3c, -10px -10px 20px #81c784;
+      }
+    }
+  }
+  

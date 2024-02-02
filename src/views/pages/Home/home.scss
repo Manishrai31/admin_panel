@@ -1,8 +1,11 @@
 .home{
     display: flex;
     flex-wrap: wrap;
+    
     .homeContainer{
         // background-color: lightblue;
+        height: 100dvh;
+        overflow: scroll;
         flex:6;
 
         .widgets , .charts{

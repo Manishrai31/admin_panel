@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './sidebar.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
@@ -10,12 +10,35 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import {Link} from 'react-router-dom';
+import { logout } from "../../../Action/authenticate";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import ConfirmAlert from "../../Alert/ConfirmAlert";
 const Sidebar = ()=>{
+    const [isOpen , setIsOpen] = useState(false);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const handleLogout =()=>{
+       setIsOpen(true);
+    }   
+
+    const onConfirm=()=>{
+        dispatch(logout());
+        setIsOpen(false)
+        navigate('/');
+    }
+    const onCancel=()=>{
+        setIsOpen(false)
+
+    }
     return (
-       <div className="sidebar">
+        
+       <div className="sidebar" >
+            < ConfirmAlert isOpen={isOpen}  onCancel={onCancel} onConfirm={onConfirm}/>
+
             <div className="top">
                 <Link to="/" style={{textDecoration : 'none'}}>
-                    <span className="logo">FTL</span>
+                    <span className="logo">KFC MART</span>
                 </Link>
             </div>
             <hr />
@@ -29,24 +52,24 @@ const Sidebar = ()=>{
                     <Link to="/users" style={{textDecoration : 'none'}}>
                         <li>
                             <PeopleIcon className="icon"/>
-                            <span>Users</span>
+                            <span>Operators</span>
                         </li>
                     </Link>
-                    <p className="title">League</p>
+                    <p className="title">Product</p>
 
                     <li>
                         <TimelineIcon className="icon"/>
-                        <span>Stocks</span>
+                        <span>Category List</span>
                     </li>
                     <li>
                         <CurrencyBitcoinIcon className="icon"/>
-                        <span>Crypto</span>
+                        <span>Product List</span>
                     </li>
                     <p className="title">Services</p>
                    
                     <li>
                         <WalletIcon className="icon"/>
-                        <span>Wallet</span>
+                        <span>Order</span>
                     </li>
                     <li>
                         <PsychologyIcon className="icon"/>
@@ -62,7 +85,7 @@ const Sidebar = ()=>{
                         <AccountCircleRoundedIcon className="icon"/>
                         <span>Profile</span>
                     </li>
-                    <li>
+                    <li onClick={handleLogout}>
                         <LogoutIcon className="icon"/>
                         <span>Logout</span>
                     </li>
