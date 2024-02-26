@@ -1,7 +1,11 @@
 .home{
     display: flex;
-    flex-wrap: wrap;
-    
+    // flex-wrap: wrap;
+    // background-color: blue;
+
+    @media (max-width : 768px){
+        // background-color: green;
+    }
     .homeContainer{
         // background-color: lightblue;
         height: 100dvh;

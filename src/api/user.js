@@ -1,13 +1,10 @@
 import { LOGIN_API } from '../Constants/Constant';
 import axios from 'axios';
 
-
 export const AuthenticateUser = async(payload)=>{
-    // console.log(payload);
     try{
-
         const result = await axios.post(LOGIN_API , {...payload});
-        // console.log(result.code);
+        
         if(result.data.status)
         {
             return {...result.data}

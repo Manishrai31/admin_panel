@@ -1,7 +1,7 @@
 import React from "react";
 // import Sidebar from '..'
-import Sidebar from '../../../components/Base/Sidebar/Sidebar';
-import Topbar from '../../../components/Base/Topbar/Topbar'
+import Sidebar from '../../components/Base/Sidebar/Sidebar';
+import Topbar from '../../components/Base/Topbar/Topbar'
 
 import './new.scss';
 const New=()=>{

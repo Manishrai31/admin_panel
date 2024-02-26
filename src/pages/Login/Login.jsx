@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import './login.scss';
 import { Visibility, VisibilityOff } from '@mui/icons-material'; // Import Material-UI icons
-import { AuthenticateUser } from '../../../api/user';
-import {login} from '../../../Action/authenticate';
+import { AuthenticateUser } from '../../api/user';
+import {login} from '../../Action/authenticate';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 

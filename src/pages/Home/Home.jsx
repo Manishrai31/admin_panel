@@ -1,11 +1,11 @@
 import React from "react";
-import Topbar from "../../../components/Base/Topbar/Topbar";
-import Sidebar from "../../../components/Base/Sidebar/Sidebar";
+import Topbar from "../../components/Base/Topbar/Topbar";
+import Sidebar from "../../components/Base/Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets"
 import './home.scss'
-import Featured from "../../../components/Featured/Featured";
-import Chart from "../../../components/Chart/Chart";
-import List from "../../../components/List/List";
+import Featured from "../../components/Featured/Featured";
+import Chart from "../../components/Chart/Chart";
+import List from "../../components/List/List";
 
 const Home = ()=>{
     return(

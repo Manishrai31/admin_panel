@@ -4,6 +4,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import TimelineIcon from '@mui/icons-material/Timeline';
 import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
+import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import WalletIcon from '@mui/icons-material/Wallet';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PsychologyIcon from '@mui/icons-material/Psychology';
@@ -14,6 +15,7 @@ import { logout } from "../../../Action/authenticate";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import ConfirmAlert from "../../Alert/ConfirmAlert";
+import Alert from '@mui/material/Alert';
 const Sidebar = ()=>{
     const [isOpen , setIsOpen] = useState(false);
     const dispatch = useDispatch();
@@ -56,13 +58,15 @@ const Sidebar = ()=>{
                         </li>
                     </Link>
                     <p className="title">Product</p>
-
+                    <Link to="/category" style={{textDecoration : 'none'}}>
                     <li>
                         <TimelineIcon className="icon"/>
                         <span>Category List</span>
                     </li>
+                    </Link>
+
                     <li>
-                        <CurrencyBitcoinIcon className="icon"/>
+                        <LocalGroceryStoreIcon className="icon"/>
                         <span>Product List</span>
                     </li>
                     <p className="title">Services</p>

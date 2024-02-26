@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
+import './confirm.scss';
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ const ConfirmAlert = ({ isOpen, onCancel, onConfirm }) => {
     <AlertContainer style={{ display: isOpen ? 'block' : 'none' }}>
       <p>Are you sure you want to proceed?</p>
       <ButtonsContainer>
-        <Button onClick={onConfirm}>Yes</Button>
+        <button className='btn-check' onClick={onConfirm}>Yes</button>
         <CancelButton onClick={onCancel}>No</CancelButton>
       </ButtonsContainer>
     </AlertContainer>

@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from '../../../components/Base/Sidebar/Sidebar';
-import Topbar from '../../../components/Base/Topbar/Topbar'
-import Chart from '../../../components/Chart/Chart'
-import List from '../../../components/List/List'
+import Sidebar from '../../components/Base/Sidebar/Sidebar';
+import Topbar from '../../components/Base/Topbar/Topbar'
+import Chart from '../../components/Chart/Chart'
+import List from '../../components/List/List'
 
 import './single.scss';
 const Single=()=>{
